@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10分でさらに進化！生成AIと連携して作業効率アップ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .container {
+            max-width: 800px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        }
+        .step-number {
+            background-color: #3b82f6; /* Blue for step numbers */
+            color: #ffffff;
+            border-radius: 9999px; /* Fully rounded */
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+        .section-separator {
+            border-top: 1px dashed #cbd5e0; /* Light gray dashed line */
+            margin: 2rem 0;
+        }
+        .tip-box {
+            background-color: #e0f2fe; /* Light blue for tips */
+            border-left: 4px solid #2196f3; /* Blue border */
+            color: #0d47a1; /* Darker blue text */
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .alert-box {
+            background-color: #fefcbf; /* Light yellow for alerts */
+            border-left: 4px solid #facc15; /* Yellow border */
+            color: #854d09; /* Darker yellow text */
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+    <div class="container mx-auto py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-4 leading-tight">
+                <span class="block text-emerald-600">10分でさらに進化！</span>
+                生成AIと連携して作業効率アップ
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                前回の教材では、AI（生成AI）への指示（プロンプト）を工夫したり、あなたの文章をコピー＆ペーストで読ませたりして、より質の高い応答を引き出す方法を学びましたね。AIがあなたの「相棒」として、様々な作業を手伝ってくれる可能性を感じていただけたかと思います。<br>
+                今回は、その生成AI「ChatGPT」をさらに深く、そして幅広く使いこなすための機能と活用法に進んでいきましょう。
+            </p>
+        </header>
+
+        <div class="section-separator"></div>
+
+        <section class="card p-6 sm:p-8 mb-12 flex flex-col sm:flex-row items-start">
+            <div class="step-number mr-4 mb-4 sm:mb-0 bg-orange-500">おさらい</div>
+            <div class="flex-grow">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">前回までのおさらい（約1分）</h2>
+                <ul class="list-disc list-inside text-gray-700 ml-4 mb-4 space-y-2">
+                    <li>AIはあなたの言葉で指示すると、文章やアイデアを作ってくれます。</li>
+                    <li>AIは過去の会話内容を覚えています。</li>
+                    <li>指示（プロンプト）に詳細な条件や役割を加えると、よりイメージに近い応答が得られます。</li>
+                    <li>コピー＆ペーストでAIに文章を読ませ、要約などもできます。</li>
+                </ul>
+                <p class="text-gray-700">
+                    今回はここから一歩進んで、ファイルを扱ったり、より質の高いアウトプットを引き出すプロンプトの考え方を深めたりします。ChatGPTの画面を開いて一緒に進めましょう。
+                </p>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <section class="card p-6 sm:p-8 mb-12 flex flex-col sm:flex-row items-start">
+            <div class="step-number mr-4 mb-4 sm:mb-0">1</div>
+            <div class="flex-grow">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg class="w-7 h-7 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L14.414 5A2 2 0 0115 6.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 10a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>
+                    AIに「ファイル」を読み込ませてみよう（約3分）
+                </h2>
+                <p class="text-gray-700 mb-4">
+                    前回のコピー＆ペーストに加え、ChatGPT（特に有料版や一部の無料機能）では、あなたのパソコンにある様々なファイルを直接アップロードして、その内容をAIに読み込ませることができます。これにより、コピー＆ペーストでは難しかった長い文書や特定の形式のデータも簡単に扱えるようになります。
+                </p>
+                <p class="text-gray-700 mb-4">
+                    ファイルアップロードは、ChatGPTの入力欄の近くにある<strong class="text-blue-600">クリップのようなマーク</strong>をクリックして行います。パソコン内のファイルや、Googleドライブ、Microsoft OneDriveなどクラウドストレージにあるファイルを直接選択することも可能です。
+                </p>
+                <p class="text-gray-700 font-bold mb-2">例えば、以下のことが可能です。</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 mb-4 space-y-2">
+                    <li>
+                        <span class="font-bold">手書きのメモをテキスト化する。</span><br>
+                        手書きの画像をアップロードして「この画像の内容をテキスト化してください」と指示すると、AIが手書き文字を読み取ってテキストにしてくれます。
+                    </li>
+                    <li>
+                        <span class="font-bold">長い議事録やレポートを要約する。</span><br>
+                        PDFやWord、Googleドキュメントなどのファイルをアップロードし、「この議事録の内容を要約してください」と指示すれば、内容を短くまとめてくれます。会議の結論やネクストアクションを素早く把握するのに便利です。
+                    </li>
+                    <li>
+                        <span class="font-bold">データファイル（CSVやExcelなど）を分析する。</span><br>
+                        例えば、タイタニック号の乗船者リストのようなCSVファイルをアップロードし、「このデータは何ですか？」と尋ねたり、「生存率が低いのはどういう人か分析してください」と指示すると、AIがデータを読み込み、分析してくれます。性別や客室等級と生存率の関係などを分析し、結果をグラフで示すことも可能です（※日本語表示に課題がある場合もあります）。このようなデータ分析は、企業の顧客リストなどに応用し、受注しやすい顧客層の分析などにも活用できます。
+                    </li>
+                </ul>
+                <p class="text-gray-700 font-bold text-indigo-700 mb-4">
+                    ここでは実際に、手元にある短い文書ファイル（メモ帳で作成したテキストファイルや簡単なWordファイルなど）や、もし可能であれば簡単な画像ファイルなどをアップロードして、その内容についてAIに質問したり要約を依頼したりしてみましょう。
+                </p>
+                <div class="alert-box">
+                    <p class="font-bold">※注意</p>
+                    <p>無料版ではファイルアップロードに制限がある場合があります。もし無料版で試せない場合は、ファイルアップロード機能の存在と、それがどんなことができるのかを理解するだけでも十分です。</p>
+                </div>
+                <p class="text-gray-700 mt-4">
+                    この機能を使うことで、AIはあなたの持っている<strong class="text-purple-600">「情報源」</strong>を直接参照できるようになり、より具体的で実践的な作業を手伝ってくれるようになります。
+                </p>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <section class="card p-6 sm:p-8 mb-12 flex flex-col sm:flex-row items-start">
+            <div class="step-number mr-4 mb-4 sm:mb-0">2</div>
+            <div class="flex-grow">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg class="w-7 h-7 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 102 0V6zm-1 6a1 1 0 100 2h.01a1 1 0 100-2H10z" clip-rule="evenodd"></path></svg>
+                    もっと伝わるプロンプトの秘訣（約3分）
+                </h2>
+                <p class="text-gray-700 mb-4">
+                    前回のプロンプトの工夫をさらに深掘りしましょう。AIは、あなたが入力した「手前の文章に対して、最もありそうな続きの文章を書く」という基本的な性質を持っています。この性質を理解すると、より質の高い応答を引き出すプロンプトを作成できます。
+                </p>
+                <p class="text-gray-700 mb-4">
+                    つまり、あなたが「<strong class="text-blue-600">欲しい最終的なアウトプット（続きの文章）</strong>」が「<strong class="text-blue-600">最も出てきやすくなるような手前の文章</strong>」を作ることが、効果的なプロンプトの考え方です。
+                </p>
+                <p class="text-gray-700 font-bold mb-2">ポイントは、「AIが出力する回答の範囲を絞り込む」ことです。</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 mb-4 space-y-2">
+                    <li>
+                        <span class="font-bold">具体的に、詳細に伝える:</span><br>
+                        例えば「犬の童話」だけでなく、「3歳向け」「登場人物は犬と猫だけ」「感動的な結末」のように条件を細かく指定する。
+                    </li>
+                    <li>
+                        <span class="font-bold">役割（ペルソナ）を与える:</span><br>
+                        「あなたは有名な絵本作家です」「あなたは〇〇分野の専門家です」のように、AIに特定の役割を演じさせることで、その役割らしい回答を引き出しやすくなります。
+                    </li>
+                    <li>
+                        <span class="font-bold">回答の形式を指定する:</span><br>
+                        「箇条書きで」「〇文字以内で」「〜という形式で」など、欲しい情報の形式を明確に伝えます。
+                    </li>
+                    <li>
+                        <span class="font-bold">「なぜそれが必要か」文脈を伝える:</span><br>
+                        例えば、ただ「〇〇について教えて」ではなく、「〇〇について知りたい。なぜなら〜という目的があるからです」のように背景を伝えることで、AIはより目的に沿った回答を生成しやすくなります。
+                    </li>
+                    <li>
+                        <span class="font-bold">AIに「何が必要か」を尋ねる:</span><br>
+                        もしあなたがどう指示すれば良いか分からない場合、「最高の回答を生成するために、私から他にどのような情報が必要ですか？質問してください。」とAIに問いかけることも効果的です。AIが必要な情報を引き出してくれます。
+                    </li>
+                </ul>
+                <p class="text-gray-700 mb-4">
+                    ソースの中では、結婚式のスピーチの例が紹介されています。単に「結婚式のスピーチを考えて」と依頼するよりも、「新郎新婦の名前」「二人の出会い（テニスサークル）」「参列者の特徴（テニスサークル関係者が多い）」「話す人の立場」「ユーモア（テニスジョーク）を多めに入れて」のように詳細な情報を加えることで、より具体的でパーソナルな、感動的ながらユーモアのあるスピーチ案が生成されています。
+                </p>
+                <p class="text-gray-700 font-bold text-indigo-700">
+                    ここで実際に試してみましょう！ 前回または今回AIに指示した内容を一つ選び、それに「どんな役割になって答えてほしいか」「どんな情報を盛り込んでほしいか」「どんな条件や形式で答えてほしいか」といった要素を加えて、より詳細なプロンプトを作成し、再度送信してみてください。
+                </p>
+                <p class="text-gray-700 mt-2">
+                    詳細な情報や条件を明確に伝えることで、AIの応答はより洗練され、あなたの意図に沿ったものに近づきます。
+                </p>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <section class="card p-6 sm:p-8 mb-12 flex flex-col sm:flex-row items-start">
+            <div class="step-number mr-4 mb-4 sm:mb-0">3</div>
+            <div class="flex-grow">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg class="w-7 h-7 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z" clip-rule="evenodd"></path></svg>
+                    AIをあなたの「相棒」にする - レビューとアイデア出し（約3分）
+                </h2>
+                <p class="text-gray-700 mb-4">
+                    生成AIは単にコンテンツをゼロから作成するだけでなく、あなたの作業の中間段階や完成したコンテンツを評価したり、改善点を提案したりするのにも役立ちます。これは、AIを「作業代行」ではなく、あなたの「相棒」や「壁打ち相手」として活用する高度な使い方です。
+                </p>
+                <p class="text-gray-700 font-bold mb-2">ソースの中では、作成した原稿をAIにレビューしてもらう例が紹介されています。</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 mb-4 space-y-2">
+                    <li>
+                        「この原稿をレビューして、課題点と私がスキルアップするためにどう改善すれば良いか教えてください」と依頼する。
+                    </li>
+                    <li>
+                        「この記事の事実情報（ファクト）の部分と、筆者の意見（主観）の部分を分離して、それぞれが適切に扱われているかレビューしてください」と依頼する。AIは文章を分析し、どの部分が事実に基づいているか、どの部分が筆者の意見かを識別して教えてくれます。
+                    </li>
+                </ul>
+                <p class="text-gray-700 mb-4">
+                    このようにAIにレビューを依頼することで、自分では気づきにくい客観的な視点からのフィードバックを得られ、あなた自身のスキル向上にも繋がります。これは、単にAIに文章を書かせる以上の価値を生み出します。
+                </p>
+                <p class="text-gray-700 mb-4">
+                    また、AIはアイデア出しの壁打ち相手としても優れています。特定のテーマについて、「〜のアイデアを〇個提案してください」といった基本的な使い方に加え、あなたの考えたアイデアのメリット・デメリットを列挙してもらったり、見落としている可能性のある点やリスクについて考えてもらったりすることで、思考を深める助けになります。
+                </p>
+                <p class="text-gray-700 font-bold text-indigo-700">
+                    これも試してみましょう！ 何かあなたが書いた短い文章（メールの下書き、ブログ記事の冒頭など）をコピー＆ペーストし、「この文章について、改善点を提案してください」「この文章をより魅力的にするためのアイデアをいくつかください」のようにAIにレビューやアイデア出しを依頼してみてください。
+                </p>
+                <p class="text-gray-700 mt-2">
+                    このようにAIを活用することで、単なる効率化にとどまらず、あなたの思考の質や成果物のクオリティそのものを向上させることが期待できます。
+                </p>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <section class="card p-6 sm:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                知っておいてほしいこと（約1分）
+            </h2>
+            <ul class="list-disc list-inside text-gray-700 ml-4 space-y-4">
+                <li>
+                    <p class="font-bold">AIは「最もらしい続き」を生成する機械です。</p>
+                    <p>そのため、事実ではない情報（ハルシネーション）を生成することがあります。AIの回答を鵜呑みにせず、特に重要な情報は自分で確認することが不可欠です。AIを「真実を判定するマシン」「事実を調べるマシン」として使うのは最も良くない使い方の一つです。</p>
+                </li>
+                <li>
+                    <p class="font-bold">学習データに含まれる偏見を反映する可能性があります。</p>
+                    <p>AIが学習したデータに偏りがある場合、その偏見が回答に現れることがあります。</p>
+                </li>
+                <li>
+                    <p class="font-bold">著作権や利用規約を確認しましょう。</p>
+                    <p>特に生成したコンテンツを商用利用する際は、ツールの利用規約や著作権に関する情報をしっかりと確認する必要があります。</p>
+                </li>
+                <li>
+                    <p class="font-bold">人間ならではのスキルがより重要になります。</p>
+                    <p>AIが定型的・反復的な作業を効率化する一方で、「問いを立てる力」、状況判断、責任を取る力、そしてAIがアクセスできない<strong class="text-blue-600">一次情報（現場での体験や人との対話から得られる情報）</strong>を得る能力など、人間独自のスキルがビジネスにおいてより価値を持つようになります。AIをこれらの人間的な活動を助ける「相棒」として活用することが、これからの時代を生き抜く鍵となります。</p>
+                </li>
+            </ul>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <section class="card p-6 sm:p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-teal-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                まとめ
+            </h2>
+            <p class="text-gray-700 mb-4">
+                今回は、AIにファイルを読み込ませる機能や、AIの性質を踏まえた効果的なプロンプトの考え方、そしてAIをレビューやアイデア出しの「相棒」として活用する方法を学びました。
+            </p>
+            <p class="text-gray-700 mb-4">
+                生成AIは、あなたの指示を待っているだけでなく、あなたの情報源を理解し、あなたの思考プロセスをサポートし、あなたのスキルアップにも貢献する可能性を秘めています。
+            </p>
+            <p class="text-gray-700 mb-4">
+                今回ご紹介した機能や活用法は、ChatGPTの持つ可能性のほんの一部です。他にも、Web検索機能、グラフ作成、プログラムの実行や修正、画像や動画の生成、音声での対話、スマートフォンの画面内容の読み取り、デスクトップアプリ連携、チャット履歴の整理（プロジェクト機能）、自分専用のAI（GPTs）作成など、様々な機能が日々進化しています。有料プランではより高性能なモデル（GPT-4やGPT-4o）が利用可能になります。
+            </p>
+            <p class="text-gray-700">
+                AIは、あなたの働き方や学び方を大きく変える力を持っています。ぜひ色々なAIツールを触り続け、自分にとって最も効果的な活用法を見つけていってください。学習を進める上で、AI関連のオンラインスクールやセミナーなども役立つ情報源となるでしょう。
+            </p>
+            <p class="text-gray-700 font-bold mt-6 text-center text-xl text-gray-800">
+                これで3回目の教材を終わります。お疲れ様でした！
+            </p>
+        </section>
+    </div>
+</body>
+</html>
